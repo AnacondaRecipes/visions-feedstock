@@ -12,6 +12,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: True # [py<36]
 
 requirements:
   host:
@@ -26,7 +27,7 @@ requirements:
     - pandas >=0.25.3
     - python
     - tangled-up-in-unicode >=0.0.4
-    - multimethod 1.4
+    - multimethod >=1.4
 
 test:
   imports:
