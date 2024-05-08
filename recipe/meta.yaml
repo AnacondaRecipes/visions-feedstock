@@ -21,13 +21,13 @@ requirements:
     - wheel
     - python
   run:
+    - python
+    - numpy >=1.23.2
+    - pandas >=2.0.0
     - attrs >=19.3.0
     - networkx >=2.4
-    - numpy
-    - pandas >=0.25.3
-    - python
-    - tangled-up-in-unicode >=0.0.4
     - multimethod >=1.4
+    - tangled-up-in-unicode >=0.0.4
 
 test:
   imports:
@@ -44,7 +44,7 @@ about:
   license_file: LICENSE
   summary: Type System for Data Analysis in Python
   description: |
-    Visions provides an extensible suite of tools to support common data analysis operations including 
+    Visions provides an extensible suite of tools to support common data analysis operations including
     type inference on unknown data, casting data types and automated data summarization.
   doc_url: https://dylan-profiler.github.io/visions/
   dev_url: https://github.com/dylan-profiler/visions
