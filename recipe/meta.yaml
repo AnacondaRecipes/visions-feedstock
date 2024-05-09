@@ -27,7 +27,6 @@ requirements:
     - attrs >=19.3.0
     - networkx >=2.4
     - multimethod >=1.4
-    - tangled-up-in-unicode >=0.0.4
 
 test:
   imports:
