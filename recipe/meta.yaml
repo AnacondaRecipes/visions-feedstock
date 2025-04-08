@@ -28,13 +28,6 @@ requirements:
     - networkx >=2.4
     - multimethod >=1.4
     - puremagic
-    # imagehash - https://github.com/dylan-profiler/visions/blob/v0.8.1/src/visions/utils/images/image_utils.py#L5
-    - imagehash
-
-# pytest-spark >=0.6.0 is not available
-{% set tests_to_skip = "test_import_spark_session" %}
-{% set tests_to_skip = tests_to_skip + " or test_create_spark_session" %}
-{% set tests_to_skip = tests_to_skip + " or test_spark_backend" %}
 
 test:
   source_files:
@@ -44,11 +37,13 @@ test:
     - visions
   commands:
     - pip check
-    - pytest -v -k "not ({{ tests_to_skip }})"
+    - pytest -v -m "not spark_test"
   requires:
     - pip
     - pytest >=5.2.0
     - shapely
+    - pillow
+    - imagehash
 
 about:
   home: https://github.com/dylan-profiler/visions
